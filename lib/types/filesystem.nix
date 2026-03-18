@@ -125,6 +125,8 @@
             [ pkgs.f2fs-tools ]
           else if (config.format == "exfat") then
             [ pkgs.exfatprogs ]
+          else if (config.format == "ntfs3" || config.format == "ntfs") then
+            [ pkgs.ntfs3g ]
           else
             [ ]
         );
